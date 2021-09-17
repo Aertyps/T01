@@ -18,6 +18,12 @@ class Circuito{
     void setF1(int r1);
     int getF1();
 
+    int resistenciaSerie();
+    int resistenciaParalelo();
+    int correnteTotalSerie();
+    int correnteTotalParalelo();
+    int potenciaFonteSerie();
+    int potenciaFonteParalelo();
 
 };
 #endif
