@@ -9,7 +9,7 @@ class Circuito{
 
   public:
     Circuito(float r1,float r2,float f);
-    Circuito();
+    Circuito(float r1,float r2);
 
     void setR1(float r1);
     float getR1();
@@ -24,6 +24,5 @@ class Circuito{
     float correnteTotalParalelo();
     float potenciaFonteSerie();
     float potenciaFonteParalelo();
-
 };
 #endif

@@ -1,11 +1,14 @@
 #include "circuito.h"
 
-Circuito::Circuito() {}
-
 Circuito::Circuito(float r1, float r2, float f) {
 	resistencia1 = r1;
 	resistencia2 = r2;
 	fonte = f;
+}
+
+Circuito::Circuito(float r1, float r2) {
+  resistencia1 = r1;
+	resistencia2 = r2;
 }
 
 void Circuito::setR1(float r1) {
