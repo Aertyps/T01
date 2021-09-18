@@ -6,8 +6,7 @@ Circuito::Circuito(int r1, int r2, int f) {
 	fonte = f;
 }
 
-Circuito::Circuito() {
-}
+Circuito::Circuito() {}
 
 void Circuito::setR1(int r1) {
 	resistencia1 = r1;
@@ -34,30 +33,29 @@ int Circuito::getF1() {
 }
 
 int Circuito::resistenciaSerie() {
-	if ((resistencia1 >= 0) && (resistencia2 >= 0)) {
-		return (resistencia1 + resistencia2);
-	} else {
-		return -1;
-	}
+	return (resistencia1 + resistencia2);
 }
 
 int Circuito::resistenciaParalelo() {
+	return ((resistencia1 * resistencia2) / (resistencia1 + resistencia2));
+}
 
-  if ((resistencia1 >= 0) && (resistencia2 >= 0)) {
-		return ((resistencia1*resistencia2)/(resistencia1+resistencia2));
-	} else {
-		return -1;
-	}
-}
 int Circuito::correnteTotalSerie() {
-   return 0;
+	int corrente = fonte / resistenciaSerie();
+	return corrente;
 }
+
 int Circuito::correnteTotalParalelo() {
-   return 0;
+	int corrente = fonte / resistenciaParalelo();
+	return corrente;
 }
+
 int Circuito::potenciaFonteSerie() {
-   return 0;
+	int potencia = fonte * correnteTotalSerie();
+	return potencia;
 }
+
 int Circuito::potenciaFonteParalelo() {
-   return 0;
+	int potencia = fonte * correnteTotalSerie();
+	return potencia;
 }
