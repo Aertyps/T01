@@ -3,27 +3,27 @@
 
 class Circuito{
   private:
-    int resistencia1;
-    int resistencia2;
-    int fonte;
+    float resistencia1;
+    float resistencia2;
+    float fonte;
 
   public:
-    Circuito(int r1,int r2,int f);
+    Circuito(float r1,float r2,float f);
     Circuito();
 
-    void setR1(int r1);
-    int getR1();
-    void setR2(int r2);
-    int getR2();
-    void setF1(int r1);
-    int getF1();
+    void setR1(float r1);
+    float getR1();
+    void setR2(float r2);
+    float getR2();
+    void setF1(float r1);
+    float getF1();
 
-    int resistenciaSerie();
-    int resistenciaParalelo();
-    int correnteTotalSerie();
-    int correnteTotalParalelo();
-    int potenciaFonteSerie();
-    int potenciaFonteParalelo();
+    float resistenciaSerie();
+    float resistenciaParalelo();
+    float correnteTotalSerie();
+    float correnteTotalParalelo();
+    float potenciaFonteSerie();
+    float potenciaFonteParalelo();
 
 };
 #endif

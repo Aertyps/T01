@@ -6,7 +6,8 @@ int main() {
 	bool op = true;
 
 	cout << "T01 - Circuitos elétricos\n\n";
-	int R1, R2, F;
+	float R1, R2, F;
+  
 	while (op) {
 		cout << "Informe o valor da resistencia R1\n";
 		cin >> R1;
@@ -16,11 +17,16 @@ int main() {
 		cin >> F;
 
 		Circuito circuito(R1, R2, F);
+  }
 
 		cout << "Valor total da resistencia em serie: "
 			 << circuito.resistenciaSerie() << "\n";
+    cout << "Valor total da corrente em serie: "
+			 << circuito.correnteTotalSerie() << "\n";
+    cout << "Valor total da corrente em serie: "
+			 << circuito.correnteTotalSerie() << "\n";
 		cout << "Valor total da resistencia em paralelo: "
 			 << circuito.resistenciaParalelo()<< "\n";
 		
-	}
+	
 }
