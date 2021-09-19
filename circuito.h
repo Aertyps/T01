@@ -8,14 +8,14 @@ class Circuito{
     float fonte;
 
   public:
-    Circuito(float r1,float r2,float f);
-    Circuito(float r1,float r2);
+    Circuito(float,float,float);
+    Circuito(float,float);
 
-    void setR1(float r1);
+    void setR1(float);
     float getR1();
-    void setR2(float r2);
+    void setR2(float);
     float getR2();
-    void setF1(float r1);
+    void setF1(float);
     float getF1();
 
     float resistenciaSerie();
@@ -24,5 +24,7 @@ class Circuito{
     float correnteTotalParalelo();
     float potenciaFonteSerie();
     float potenciaFonteParalelo();
+    static Circuito potObjSerie(Circuito, Circuito);
+    static Circuito potObjParalelo(Circuito, Circuito);
 };
 #endif

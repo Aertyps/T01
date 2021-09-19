@@ -7,7 +7,7 @@ Circuito::Circuito(float r1, float r2, float f) {
 }
 
 Circuito::Circuito(float r1, float r2) {
-  resistencia1 = r1;
+	resistencia1 = r1;
 	resistencia2 = r2;
 }
 
@@ -59,19 +59,19 @@ float Circuito::potenciaFonteSerie() {
 }
 
 float Circuito::potenciaFonteParalelo() {
-	float potencia = fonte * correnteTotalSerie();
+	float potencia = fonte * correnteTotalParalelo();
 	return potencia;
 }
 
-static Circuito potObjSerie(Circuito c1, Circuito c2) {
-	if (c1.potenciaFonteSerie() > c2.potenciaFonteSerie()) {
+Circuito Circuito::potObjSerie(Circuito c1, Circuito c2) {
+	if (c1.potenciaFonteParalelo() < c2.potenciaFonteParalelo()) {
 		return c1;
 	}
 	return c2;
 }
 
-static Circuito potObjParalelo(Circuito c1, Circuito c2) {
-	if (c1.potenciaFonteParalelo() > c2.potenciaFonteParalelo()) {
+Circuito Circuito::potObjParalelo(Circuito c1, Circuito c2) {
+	if (c1.potenciaFonteParalelo() < c2.potenciaFonteParalelo()) {
 		return c1;
 	}
 	return c2;
