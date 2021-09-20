@@ -32,6 +32,8 @@ int main() {
 			}
 
 			op++;
+		} else {
+			cout << "Informe resistencias maiores que zero\n";
 		}
 	}
 

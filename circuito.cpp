@@ -64,7 +64,7 @@ float Circuito::potenciaFonteParalelo() {
 }
 
 Circuito Circuito::potObjSerie(Circuito c1, Circuito c2) {
-	if (c1.potenciaFonteParalelo() < c2.potenciaFonteParalelo()) {
+	if (c1.potenciaFonteSerie() < c2.potenciaFonteSerie()) {
 		return c1;
 	}
 	return c2;
